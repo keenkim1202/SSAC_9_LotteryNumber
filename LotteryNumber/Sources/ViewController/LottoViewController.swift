@@ -9,6 +9,8 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+// TODO: 최신 회차정보 자동으로 가져오기 - html 크롤링 or 현재 최신회차를 기준으로 계속 + 계산
+
 class LottoViewController: UIViewController {
   
   // MARK: - Properties

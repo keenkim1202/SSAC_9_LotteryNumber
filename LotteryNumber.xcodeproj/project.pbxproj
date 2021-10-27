@@ -15,8 +15,6 @@
 		1C60550527292EEA00DFBEB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C60550327292EEA00DFBEB9 /* LaunchScreen.storyboard */; };
 		1C60550E2729300D00DFBEB9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1C60550D2729300D00DFBEB9 /* Alamofire */; };
 		1C6055112729301E00DFBEB9 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 1C6055102729301E00DFBEB9 /* SwiftyJSON */; };
-		1C6055132729352600DFBEB9 /* DrawNoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6055122729352600DFBEB9 /* DrawNoTableViewCell.swift */; };
-		1C6055152729354200DFBEB9 /* WinningNoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6055142729354200DFBEB9 /* WinningNoTableViewCell.swift */; };
 		1C6055172729395E00DFBEB9 /* CALayer++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6055162729395E00DFBEB9 /* CALayer++Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,8 +27,6 @@
 		1C60550127292EEA00DFBEB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C60550427292EEA00DFBEB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C60550627292EEA00DFBEB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C6055122729352600DFBEB9 /* DrawNoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawNoTableViewCell.swift; sourceTree = "<group>"; };
-		1C6055142729354200DFBEB9 /* WinningNoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningNoTableViewCell.swift; sourceTree = "<group>"; };
 		1C6055162729395E00DFBEB9 /* CALayer++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer++Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,18 +62,56 @@
 		1C6054F727292EE800DFBEB9 /* LotteryNumber */ = {
 			isa = PBXGroup;
 			children = (
-				1C6054F827292EE800DFBEB9 /* AppDelegate.swift */,
-				1C6054FA27292EE800DFBEB9 /* SceneDelegate.swift */,
-				1C6054FC27292EE800DFBEB9 /* LottoViewController.swift */,
-				1C6054FE27292EE800DFBEB9 /* Main.storyboard */,
-				1C6055162729395E00DFBEB9 /* CALayer++Extension.swift */,
-				1C60550127292EEA00DFBEB9 /* Assets.xcassets */,
-				1C60550327292EEA00DFBEB9 /* LaunchScreen.storyboard */,
-				1C60550627292EEA00DFBEB9 /* Info.plist */,
-				1C6055122729352600DFBEB9 /* DrawNoTableViewCell.swift */,
-				1C6055142729354200DFBEB9 /* WinningNoTableViewCell.swift */,
+				1C60551A27294BE100DFBEB9 /* Sources */,
+				1C60551927294BD900DFBEB9 /* Resources */,
+				1C60551C27294C0F00DFBEB9 /* Supporting Files */,
 			);
 			path = LotteryNumber;
+			sourceTree = "<group>";
+		};
+		1C60551827294BD100DFBEB9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1C6055162729395E00DFBEB9 /* CALayer++Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1C60551927294BD900DFBEB9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1C6054FE27292EE800DFBEB9 /* Main.storyboard */,
+				1C60550127292EEA00DFBEB9 /* Assets.xcassets */,
+				1C60550327292EEA00DFBEB9 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1C60551A27294BE100DFBEB9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1C6054F827292EE800DFBEB9 /* AppDelegate.swift */,
+				1C6054FA27292EE800DFBEB9 /* SceneDelegate.swift */,
+				1C60551B27294BFD00DFBEB9 /* ViewController */,
+				1C60551827294BD100DFBEB9 /* Extension */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1C60551B27294BFD00DFBEB9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C6054FC27292EE800DFBEB9 /* LottoViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		1C60551C27294C0F00DFBEB9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C60550627292EEA00DFBEB9 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,9 +195,7 @@
 			files = (
 				1C6054FD27292EE800DFBEB9 /* LottoViewController.swift in Sources */,
 				1C6054F927292EE800DFBEB9 /* AppDelegate.swift in Sources */,
-				1C6055132729352600DFBEB9 /* DrawNoTableViewCell.swift in Sources */,
 				1C6055172729395E00DFBEB9 /* CALayer++Extension.swift in Sources */,
-				1C6055152729354200DFBEB9 /* WinningNoTableViewCell.swift in Sources */,
 				1C6054FB27292EE800DFBEB9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,7 +347,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5LZNHGFB8C;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LotteryNumber/Info.plist;
+				INFOPLIST_FILE = "LotteryNumber/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -343,7 +375,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5LZNHGFB8C;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LotteryNumber/Info.plist;
+				INFOPLIST_FILE = "LotteryNumber/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -256,7 +256,7 @@
     </scenes>
     <resources>
         <namedColor name="YellowBallColor">
-            <color red="0.9929074645" green="0.8029585481" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.99299997091293335" green="0.80299997329711914" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
