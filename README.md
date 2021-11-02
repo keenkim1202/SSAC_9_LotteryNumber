@@ -1,5 +1,5 @@
 # SSAC_9_LotteryNumber
-동행복권 API를 통해 회차별 로또 당첨 번호를 보여주는 앱입니다.
+동행복권 API를 통해 (1~최신회차까지) 회차별 로또 당첨 번호를 보여주는 앱입니다.
 
 # Assigment
 - [x] 참조이미지와 같이 화면 구성하기
@@ -19,4 +19,4 @@
 |<img src="https://user-images.githubusercontent.com/59866819/139908999-b8b0411f-51c2-4516-bbea-69f03cdfad5c.png" />|<img width="120" src="https://user-images.githubusercontent.com/59866819/135194858-4405d3a0-0de3-4ca6-a594-3b08e0ae951b.png" />|<img width="65%" src="https://user-images.githubusercontent.com/59866819/139909007-e389b8bb-ab9d-485e-9e86-1a5ba2d449e4.png" />|
 
 # 실행 영상
-<p align="center"><img src="https://user-images.githubusercontent.com/59866819/139910699-a2495e6a-7e11-4bd5-a953-62016ab066db.mp4" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/59866819/139911099-2707edd3-2ad3-49b2-a4f5-11ddc0bdea9b.mp4" /></p>
