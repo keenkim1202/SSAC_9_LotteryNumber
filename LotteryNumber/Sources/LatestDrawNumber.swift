@@ -16,7 +16,6 @@ let dateFormatter: DateFormatter = {
   return df
 }()
 
-let baseDate = "2021-10-07"
 let calendar = Calendar.current
 let yesterday = calendar.date(byAdding: .day, value: -1, to: Date())
 
@@ -28,7 +27,8 @@ let startDate = dateFormatter.toDate(date: "2002-12-07") // 로또 1회 추첨�
 let startWeeks = calendar.dateComponents([.weekOfYear, .yearForWeekOfYear, .weekday, .day, .year], from: startDate)
 var endWeeks = calendar.dateComponents([.weekOfYear, .yearForWeekOfYear, .weekday, .day, .year], from: Date()) // 오늘
 
-func isLeapYear(_ year: Int) -> Bool { // 윤년인지 확인하는 함수
+// MARK: 윤년인지 확인하는 함수
+func isLeapYear(_ year: Int) -> Bool {
   let date = dateFormatter.toDate(date: "\(year)-02-01")
   let numberOfDays = calendar.range(of: .day, in: .month, for: date)!.upperBound - 1
   
@@ -38,6 +38,7 @@ func isLeapYear(_ year: Int) -> Bool { // 윤년인지 확인하는 함수
   return false
 }
 
+// MARK: 가장 최신 회차 정보 구하는 함수
 func getDrawNum() -> Int {
   // 연도별 윤년 여부를 배열에 추가
   for i in startWeeks.year! + 1..<endWeeks.year! {
@@ -73,7 +74,6 @@ func getDrawNum() -> Int {
       endWeeks.weekday = 7
     }
   }
-
   let startYearSatCount = 52 - startWeeks.weekOfYear!
   let endyearSatCount = endWeeks.weekOfYear!
 

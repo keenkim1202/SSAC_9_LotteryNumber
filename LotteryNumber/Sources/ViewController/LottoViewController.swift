@@ -132,7 +132,6 @@ class LottoViewController: UIViewController {
       }
     }
   }
-  
 }
 
 // MARK: - Extension - PickerView Delegate & DataSource
