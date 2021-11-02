@@ -125,7 +125,7 @@ class LottoViewController: UIViewController {
         self.configureBall(self.bonusLabel, number: json["bnusNo"].intValue)
         
         self.dateLabel.text = "\(json["drwNoDate"].stringValue) 추첨"
-        self.drawNoLabel.text = json["drwNo"].stringValue
+        self.drawNoLabel.text = "\(json["drwNo"].stringValue)회"
         
       case .failure(let error):
         print(error)
