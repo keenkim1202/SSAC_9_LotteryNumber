@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-// TODO: 최신 회차정보 자동으로 가져오기 - html 크롤링 or 현재 최신회차를 기준으로 계속 + 계산
+// TODO: 최신 회차정보 자동으로 가져오기 - 현재 날짜를 기준으로 매주 토요일 정보 가져오기.
 
 class LottoViewController: UIViewController {
   
@@ -36,10 +36,17 @@ class LottoViewController: UIViewController {
   // MARK: - View Life-Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    setPickerView()
+    cardView.layer.addBorder([.bottom], color: UIColor(named: "BorderColor") ?? UIColor.lightGray, width: 1)
+    fetchLotteryNumber(latestDraw)
+  }
+
+  func setPickerView() {
     pickerView.delegate = self
     pickerView.dataSource = self
     
-    pickerData = Array<Int>(1...latestDraw).reversed()
+    pickerData = Array<Int>(1...getDrawNum()).reversed()
     
     // picker toolbar
     let pickerToolbar : UIToolbar = UIToolbar()
@@ -57,9 +64,6 @@ class LottoViewController: UIViewController {
     
     textField.inputView = pickerView
     textField.inputAccessoryView = pickerToolbar
-    
-    cardView.layer.addBorder([.bottom], color: UIColor(named: "BorderColor") ?? UIColor.lightGray, width: 1)
-    fetchLotteryNumber(latestDraw)
   }
   
   // MARK: - Configure
@@ -92,15 +96,20 @@ class LottoViewController: UIViewController {
     textField.text = ""
   }
   
+  func setLabel() {
+    
+  }
+  
   // MARK: - fetch Data
   func fetchLotteryNumber(_ drawNo: Int) {
     let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(drawNo)"
-    
+    print(url)
     AF.request(url, method: .get).validate().responseJSON { response in
       switch response.result {
       case .success(let value):
         let json = JSON(value)
         
+        // TODO: 반복적인 부분을 더 줄여 주고 싶음🤔
         self.configureBall(self.no1Label, number: json["drwtNo1"].intValue)
         self.configureBall(self.no2Label, number: json["drwtNo2"].intValue)
         self.configureBall(self.no3Label, number: json["drwtNo3"].intValue)
