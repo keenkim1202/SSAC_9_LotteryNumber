@@ -8,14 +8,16 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import JGProgressHUD
 
 // TODO: 최신 회차정보 자동으로 가져오기 - 현재 날짜를 기준으로 매주 토요일 정보 가져오기.
 
 class LottoViewController: UIViewController {
   
   // MARK: - Properties
-  let latestDraw: Int = 986
+  let latestDraw: Int = getDrawNum()
   let pickerView = UIPickerView()
+  let progress = JGProgressHUD()
   var selected = ""
   var pickerData = Array<Int>()
   
@@ -38,15 +40,18 @@ class LottoViewController: UIViewController {
     super.viewDidLoad()
     
     setPickerView()
+    
     cardView.layer.addBorder([.bottom], color: UIColor(named: "BorderColor") ?? UIColor.lightGray, width: 1)
     fetchLotteryNumber(latestDraw)
+    selected = "\(latestDraw)"
+    textField.text = selected
   }
 
   func setPickerView() {
     pickerView.delegate = self
     pickerView.dataSource = self
     
-    pickerData = Array<Int>(1...getDrawNum()).reversed()
+    pickerData = Array<Int>(1...latestDraw).reversed()
     
     // picker toolbar
     let pickerToolbar : UIToolbar = UIToolbar()
@@ -86,18 +91,19 @@ class LottoViewController: UIViewController {
   }
   
   @objc func onPickDone() {
-    textField.text = selected
+    progress.show(in: view, animated: true)
+    
+    if selected != textField.text {
+      textField.text = selected
+      fetchLotteryNumber(Int(selected)!)
+    }
     textField.resignFirstResponder()
-    fetchLotteryNumber(Int(selected)!)
+    progress.dismiss(animated: true)
   }
   
   @objc func onPickCancel() {
-    textField.resignFirstResponder() // 피커뷰를 내림 (텍스트필드가 responder 상태를 읽음)
+    textField.resignFirstResponder()
     textField.text = ""
-  }
-  
-  func setLabel() {
-    
   }
   
   // MARK: - fetch Data

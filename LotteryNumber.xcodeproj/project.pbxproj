@@ -18,6 +18,7 @@
 		1C6055172729395E00DFBEB9 /* CALayer++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6055162729395E00DFBEB9 /* CALayer++Extension.swift */; };
 		1CF5D58427319CCB00BB64D9 /* LatestDrawNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF5D58327319CCB00BB64D9 /* LatestDrawNumber.swift */; };
 		1CF5D58627319D4200BB64D9 /* DateFormatter++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF5D58527319D4200BB64D9 /* DateFormatter++Extension.swift */; };
+		1CF5D58927319E4200BB64D9 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 1CF5D58827319E4200BB64D9 /* JGProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C6055112729301E00DFBEB9 /* SwiftyJSON in Frameworks */,
+				1CF5D58927319E4200BB64D9 /* JGProgressHUD in Frameworks */,
 				1C60550E2729300D00DFBEB9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +141,7 @@
 			packageProductDependencies = (
 				1C60550D2729300D00DFBEB9 /* Alamofire */,
 				1C6055102729301E00DFBEB9 /* SwiftyJSON */,
+				1CF5D58827319E4200BB64D9 /* JGProgressHUD */,
 			);
 			productName = LotteryNumber;
 			productReference = 1C6054F527292EE800DFBEB9 /* LotteryNumber.app */;
@@ -171,6 +174,7 @@
 			packageReferences = (
 				1C60550C2729300D00DFBEB9 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				1C60550F2729301E00DFBEB9 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				1CF5D58727319E4200BB64D9 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = 1C6054F627292EE800DFBEB9 /* Products */;
 			projectDirPath = "";
@@ -442,6 +446,14 @@
 				version = 5.0.0;
 			};
 		};
+		1CF5D58727319E4200BB64D9 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -454,6 +466,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1C60550F2729301E00DFBEB9 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		1CF5D58827319E4200BB64D9 /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CF5D58727319E4200BB64D9 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
